@@ -205,6 +205,18 @@ class _MyAppState extends State<MyApp> {
   }
 
   calculateLBM(String weights, String heights) {
+    _controllerheight.clear();
+    _controllerweight.clear();
+    ageGrp = 'No';
+    genderGrp = 'Male';
+    boer = 0.0;
+    james = 0.0;
+    hume = 0.0;
+    peter = 0.0;
+    boerfat = 0.0;
+    jamesfat = 0.0;
+    humefat = 0.0;
+    peterfat = 0.0;
     double weight = double.parse(weights);
     double height = double.parse(heights);
     if (ageGrp == 'No') {
@@ -232,7 +244,7 @@ class _MyAppState extends State<MyApp> {
       jamesfat.toStringAsFixed(0);
       humefat.toStringAsFixed(0);
     } else {
-      peterfat = (weight - peter) / 100;
+      peterfat = (weight - peter) / weight * 100;
       peterfat.toStringAsFixed(0);
     }
     setState(() {});
