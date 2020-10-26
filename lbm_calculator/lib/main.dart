@@ -207,8 +207,6 @@ class _MyAppState extends State<MyApp> {
   calculateLBM(String weights, String heights) {
     _controllerheight.clear();
     _controllerweight.clear();
-    ageGrp = 'No';
-    genderGrp = 'Male';
     boer = 0.0;
     james = 0.0;
     hume = 0.0;
